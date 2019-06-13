@@ -4,5 +4,5 @@
 - Default Sqlite back end
 - Ability to create and edit users
 - Create events and join events other users have created
-- Front end is ugly but I was focused on the front end
+- Front end is ugly but I was focused on the back end
 - Video coming soon
