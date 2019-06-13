@@ -1,0 +1,17 @@
+<h1><%=@event.name%></h1>
+<h3>Host: <%=@event.user.first_name%></h3>
+<h3>Date: <%=@event.date%></h3>
+<h3>Locaion: <%=@event.location%></h3>
+<h3>People who are attending this event: <%=@event.attendees.length%><h3>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Location</th>
+    </tr>
+    <%@event.attendees.each do |e|%>
+    <tr>
+        <td><%=e.user.first_name%> <%=e.user.last_name%><td>
+        <td><%=e.user.location%><td>
+    </tr>
+    <%end%>
+</table>

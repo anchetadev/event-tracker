@@ -1,0 +1,15 @@
+<a href="/users/<%=current_user.id%>">Event Dashboard </a>
+<h1>Edit your profile</h1>
+<form method="POST" action="/users/<%=current_user.id%>/edit">
+<input type = 'hidden' name = "authenticity_token" value = "<%=form_authenticity_token%>">
+    <input type="hidden" name="_method" value="patch" >
+    First Name: <input type="text" name ="First_Name" value="<%=current_user.first_name%>">
+    <br>
+    Last Name: <input type="text" name ="Last_Name" value="<%=current_user.last_name%>">
+    <br>
+    Email: <input type="text" name="Email" value="<%=current_user.email%>">
+    <br>
+    Location: <input type="text" name ="Location" value="<%=current_user.location%>">
+    <br>
+    <input type="submit" value="Update">
+</form>
